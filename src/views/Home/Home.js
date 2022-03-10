@@ -10,12 +10,14 @@ export default function Home() {
   const [subtitle, setSubtitle] = useState('');
   const [text, setText] = useState('');
   const [align, setAlign] = useState('');
+  const [titleFont, setTitleFont] = useState('');
+
   // add useState calls here for title, subtitle, font, align, and text
 
   return (
     <main>
       {/* pass the state variables as props to the presentational components */}
-      <Preview {...{ title, subtitle, text, align, setAlign }} />
+      <Preview {...{ title, subtitle, text, align, setAlign, titleFont, setTitleFont }} />
       <Editor
         {...{
           title,
@@ -26,6 +28,8 @@ export default function Home() {
           setText,
           align,
           setAlign,
+          titleFont,
+          setTitleFont,
         }}
       />
     </main>
